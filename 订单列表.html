@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #nav{
+            /*导航栏*/
+            width: 400px;
+            height: 45px;
+            background-color: white;
+            position: fixed;
+            bottom: 0;
+            display: flex;
+        }
+        #nav div{
+            width: 80px;
+            height:54px ;
+            font-size: 12px;
+            text-align: center;
+        }
+        #di{
+            width: 413px;
+            height: 44px;
+            position: fixed;
+            /*margin-top: 15px;*/
+
+        }
+        ul{
+            width: 413px;
+            height: 44px;
+            list-style: none;
+            background-color: white;
+
+        }
+        ul li{
+            width: 70px;
+            height: 44px;
+            float: left;
+            line-height: 40px;
+            text-align: center;
+
+        }
+        ul li:nth-child(1){
+            width: 40px;
+        }
+        /*搜索框*/
+        #ss{
+            width: 387px;
+            height: 27px;
+            display: flex;
+            margin: auto;
+            margin-top: 15px;
+        }
+        #ss .dd{
+            width: 299px;
+            height: 27px;
+            display: flex;
+            border-radius: 25px 25px;
+            background-color: white;
+        }
+        #ss .so{
+            width: 85px;
+            height: 27px;
+            background-color: white;
+            border-radius: 25px 25px;
+            text-align: center;
+            line-height: 30px;
+            margin-left: 10px;
+        }
+        #da{
+            width: 386px;
+            height: 285px;
+            margin-top: 15px;
+            background-color: white;
+            margin-left: 12px;
+        }
+        #tp{
+            width: 386px;
+            display: flex;
+            margin: auto;
+        }
+        #g{
+            width: 386px;
+            height: 47px;
+            display: flex;
+            margin-top: 15px;
+        }
+        #g .gd{
+            width: 66px;
+            height: 28px;
+            text-align: center;
+            margin-left: 20px;
+        }
+        #g .kp{
+            width:88px ;
+            height: 28px;
+            text-align: center;
+            border: solid 1px gainsboro;
+            margin-left: 12px;
+            border-radius: 20px 20px ;
+        }
+        #g .wl{
+            width:88px ;
+            height: 28px;
+            text-align: center;
+            border: solid 1px gainsboro;
+            margin-left: 5px;
+            border-radius: 20px 20px ;
+        }
+        #g .sh{
+            width:88px ;
+            height: 28px;
+            text-align: center;
+            border: solid 1px red;
+            margin-left: 5px;
+            border-radius: 20px 20px ;
+        }
+        #db{
+            width: 386px;
+            height: 285px;
+            margin-top: 15px;
+            background-color: white;
+            margin-left: 12px;
+        }
+        #tb{
+            width: 386px;
+            display: flex;
+            margin: auto;
+        }
+        #gb{
+            width: 386px;
+            height: 47px;
+            display: flex;
+            margin-top: 15px;
+        }
+        #gb .gd{
+            width: 66px;
+            height: 28px;
+            text-align: center;
+            margin-left: 20px;
+        }
+        #gb .kp{
+            width:88px ;
+            height: 28px;
+            text-align: center;
+            border: solid 1px gainsboro;
+            margin-left: 12px;
+            border-radius: 20px 20px ;
+        }
+        #gb .wl{
+            width:88px ;
+            height: 28px;
+            text-align: center;
+            border: solid 1px gainsboro;
+            margin-left: 5px;
+            border-radius: 20px 20px ;
+        }
+        #gb .sh{
+            width:88px ;
+            height: 28px;
+            text-align: center;
+            border: solid 1px red;
+            margin-left: 5px;
+            border-radius: 20px 20px ;
+        }
+        #dc{
+            width: 386px;
+            height: 285px;
+            margin-top: 15px;
+            background-color: white;
+            margin-left: 12px;
+        }
+        #tc{
+            width: 386px;
+            display: flex;
+            margin: auto;
+        }
+        #gc{
+            width: 386px;
+            height: 47px;
+            display: flex;
+            margin-top: 15px;
+        }
+        #gc .gd{
+            width: 66px;
+            height: 28px;
+            text-align: center;
+            margin-left: 20px;
+        }
+        #gc .kp{
+            width:88px ;
+            height: 28px;
+            text-align: center;
+            border: solid 1px gainsboro;
+            margin-left: 12px;
+            border-radius: 20px 20px ;
+        }
+        #gc .wl{
+            width:88px ;
+            height: 28px;
+            text-align: center;
+            border: solid 1px gainsboro;
+            margin-left: 5px;
+            border-radius: 20px 20px ;
+        }
+        #gc .sh{
+            width:88px ;
+            height: 28px;
+            text-align: center;
+            border: solid 1px red;
+            margin-left: 5px;
+            border-radius: 20px 20px ;
+        }
+    </style>
+</head>
+<body style="background-color: #d0d0d0">
+<div id="di">
+    <ul>
+        <li class="iconfont" style="font-size: 30px">
+            &#xe744;
+        </li>
+        <li>
+            <div>全部</div>
+        </li>
+        <li>
+            <div>待付款</div>
+        </li>
+        <li>
+            <div>代发货</div>
+        </li>
+        <li>
+            <div>待收货</div>
+        </li>
+        <li>
+            <div>待评价</div>
+        </li>
+    </ul>
+
+</div>
+<div style="height: 44px"></div>
+<div id="ss">
+
+    <div class="dd">
+        <div class="iconfont" style="font-size: 25px">&#xe634;</div>
+        <input type="" placeholder="搜索全部订单" style="width: 240px;background-color: white;height:25px;font-size: 15px;border: none">
+    </div>
+    <div class="so">搜索</div>
+</div>
+<div id="da"style="border-radius: 10px 10px">
+    <div class="dm" style="display: flex;margin-left: 10px;height: 47px;line-height: 37px">
+        <div>
+            <img style="width: 15px;height: 15px" src="https://gw.alicdn.com/tfs/TB1LmH7SXXXXXXYXFXXXXXXXXXX-63-63.png_50x50_.webp" alt="">
+            <span>自然旋律旗舰店</span>
+        </div>
+        <div style="width: 243px">
+            <span style="margin-left: 150px;line-height: 20px;color: red">卖家已发货</span>
+        </div>
+    </div>
+    <div id="tp">
+        <div>
+            <img style="width: 99px;height: 99px;margin-left: 5px" src="https://img.alicdn.com/imgextra/i2/762071905/O1CN017k3vtu1PwX7MD5eeV_!!762071905-0-lubanu-s.jpg_200x200.jpg" alt="">
+        </div>
+        <div style="display: flex">
+            <div style="margin-left: 5px">
+                <span>自然旋律金盏花爽肤水清爽型补水保湿收缩毛孔化妆水</span>
+                <br>
+                <span style="font-size: 12px;color: silver">300.0gr</span>
+                <br>
+                <span style="color: red;font-size: 12px">七天无理由退换</span>
+            </div>
+            <div>
+                <span>￥89.00</span>
+                <span class="iconfont">&#xe627;1</span>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div id="bx" style="text-align: center;font-size: 12px">保险服务</div>
+    <div>
+        <span style="color: silver;font-size: 12px;margin-left: 130px">总价￥89.90，优惠￥20.00</span>
+        <span style="font-size: 12px">实付款￥69.90</span>
+    </div>
+    <div id="g">
+        <div class="gd">更多</div>
+        <div class="kp">申请开票</div>
+        <div class="wl">查看物流</div>
+        <div class="sh"style="background-color: red;color: white">确认收货</div>
+    </div>
+</div>
+<div id="db" style="border-radius: 10px 10px">
+    <div class="dm" style="display: flex;margin-left: 10px;height: 47px;line-height: 37px">
+        <div>
+            <img style="width: 15px;height: 15px" src="https://gw.alicdn.com/tfs/TB1LmH7SXXXXXXYXFXXXXXXXXXX-63-63.png_50x50_.webp" alt="">
+            <span>自然旋律旗舰店</span>
+        </div>
+        <div style="width: 243px">
+            <span style="margin-left: 150px;line-height: 20px;color: red">卖家已发货</span>
+        </div>
+    </div>
+    <div id="tb">
+        <div>
+            <img style="width: 99px;height: 99px;margin-left: 5px" src="https://img.alicdn.com/imgextra/i2/762071905/O1CN017k3vtu1PwX7MD5eeV_!!762071905-0-lubanu-s.jpg_200x200.jpg" alt="">
+        </div>
+        <div style="display: flex">
+            <div style="margin-left: 5px">
+                <span>自然旋律金盏花爽肤水清爽型补水保湿收缩毛孔化妆水</span>
+                <br>
+                <span style="font-size: 12px;color: silver">300.0gr</span>
+                <br>
+                <span style="color: red;font-size: 12px">七天无理由退换</span>
+            </div>
+            <div>
+                <span>￥89.00</span>
+                <span class="iconfont">&#xe627;1</span>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div id="bb" style="text-align: center;font-size: 12px">保险服务</div>
+    <div>
+        <span style="color: silver;font-size: 12px;margin-left: 130px">总价￥89.90，优惠￥20.00</span>
+        <span style="font-size: 12px">实付款￥69.90</span>
+    </div>
+    <div id="gb">
+        <div class="gd">更多</div>
+        <div class="kp">申请开票</div>
+        <div class="wl">查看物流</div>
+        <div class="sh" style="background-color: red;color: white">确认收货</div>
+    </div>
+</div>
+<div id="dc" style="border-radius: 10px 10px">
+    <div class="dm" style="display: flex;margin-left: 10px;height: 47px;line-height: 37px">
+        <div>
+            <img style="width: 15px;height: 15px" src="https://gw.alicdn.com/tfs/TB1LmH7SXXXXXXYXFXXXXXXXXXX-63-63.png_50x50_.webp" alt="">
+            <span>自然旋律旗舰店</span>
+        </div>
+        <div style="width: 243px">
+            <span style="margin-left: 150px;line-height: 20px;color: red">卖家已发货</span>
+        </div>
+    </div>
+    <div id="tc">
+        <div>
+            <img style="width: 99px;height: 99px;margin-left: 5px" src="https://img.alicdn.com/imgextra/i2/762071905/O1CN017k3vtu1PwX7MD5eeV_!!762071905-0-lubanu-s.jpg_200x200.jpg" alt="">
+        </div>
+        <div style="display: flex">
+            <div style="margin-left: 5px">
+                <span>自然旋律金盏花爽肤水清爽型补水保湿收缩毛孔化妆水</span>
+                <br>
+                <span style="font-size: 12px;color: silver">300.0gr</span>
+                <br>
+                <span style="color: red;font-size: 12px">七天无理由退换</span>
+            </div>
+            <div>
+                <span>￥89.00</span>
+                <span class="iconfont">&#xe627;1</span>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div id="bc" style="text-align: center;font-size: 12px">保险服务</div>
+    <div>
+        <span style="color: silver;font-size: 12px;margin-left: 130px">总价￥89.90，优惠￥20.00</span>
+        <span style="font-size: 12px">实付款￥69.90</span>
+    </div>
+    <div id="gc">
+        <div class="gd">更多</div>
+        <div class="kp">申请开票</div>
+        <div class="wl">查看物流</div>
+        <div class="sh" style="background-color: red;color: white">确认收货</div>
+    </div>
+</div>
+<div>
+    <div id="nav">
+        <div>
+            <p class="iconfont">&#xe607;</p>
+            <span>首页</span>
+        </div>
+        <div>
+            <a href="新分类页面.html">
+                <p class="iconfont">&#xe6ef;</p>
+                <span>分类</span>
+            </a>
+        </div>
+        <div>
+            <p class="iconfont">&#xe6f1;</p>
+            <span>发现</span>
+        </div>
+        <div>
+            <p class="iconfont">&#xe748;</p>
+            <span>购物车</span>
+        </div>
+        <div>
+
+            <a href="登录注册.html"><p class="iconfont">&#xe6f0;</p>
+                <span>未登录</span></a>
+        </div>
+
+    </div>
+    <div style="width: 400px;height: 45px"></div>
+
+</div>
+</body>
+</html>
